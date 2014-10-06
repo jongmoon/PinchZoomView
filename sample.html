@@ -1,0 +1,34 @@
+<html>
+<head>
+<!-- http://jsperf.com/pinchzoomview -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<style type="text/css">
+	div.touch_box {
+		width : 300px;
+		height : 300px;
+		border : 1px;
+		margin : 5px;
+		border : 3px;
+		background-color: lime;
+	}
+</style>	
+</head>
+<body>
+	Hello World! This page is not scalable!
+	<div class="touch_box">#1. Pinch zoom this box!
+		<div class="gesture">gesture scale:<span>0</span></div>
+		<div class="touch">touch scale:<span>0</span></div>
+	</div>
+	<div class="touch_box">#2. Pinch zoom this box!
+		<div class="gesture">gesture scale:<span>0</span></div>
+		<div class="touch">touch scale:<span>0</span></div>
+	</div>
+<script type="text/javascript" src="./libs/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="./src/jquery.pinchzoomview.js"></script>
+<script type="text/javascript" src="http://timmywil.github.io/jquery.panzoom/dist/jquery.panzoom.js"></script>
+<script type="text/javascript">
+	$(".touch_box").pinchZoomView();//.pinchZoomView('zoom', 0.5);
+</script>
+</body>
+</html>
